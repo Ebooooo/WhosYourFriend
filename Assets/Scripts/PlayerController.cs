@@ -6,32 +6,29 @@ public class PlayerController: MonoBehaviour
 {
 
     [SerializeField] private float moveSpeed = 5f;
-    private float horizontal;
-    private float speedLimit = 0.7f;
+    private Animator walkanimation;
+    private Vector2 movement;
 
-    private Transform body;
     void Start()
     {
-        body = transform;
+        walkanimation = GetComponent<Animator>();
     }
 
     void Update()
     {
-        InputCollection();
-        Movement();
+        movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
+        walkanimation.SetFloat("Walk", Mathf.Abs(movement.magnitude * moveSpeed));
+
+        bool flipped = movement.x < 0;
+        this.transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
     }
 
-    private void InputCollection()
+    private void FixedUpdate() 
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-    }
-
-    private void Movement()
-    {
-        float horizontalSpeed = horizontal * moveSpeed;
-        if(horizontal != 0)
+        if(movement != Vector2.zero)
         {
-            body.position += new Vector3(horizontalSpeed * Time.deltaTime, 0f, 0f);
+            var xMovement = movement.x * moveSpeed * Time.deltaTime;
+            this.transform.Translate(new Vector3(xMovement, 0), Space.World);
         }
     }
 }

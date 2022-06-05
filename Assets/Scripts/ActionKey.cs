@@ -22,7 +22,6 @@ public class ActionKey : MonoBehaviour
     {
     if(col.CompareTag("Player"))
     {
-        Debug.Log("kolizja");
         talk.SetActive(true);
     }
     }
