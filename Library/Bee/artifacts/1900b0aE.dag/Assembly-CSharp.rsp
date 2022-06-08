@@ -376,6 +376,7 @@
 "Assets/Scripts/ActionKey.cs"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/TextWriter.cs"
 -langversion:9.0
 
 /deterministic
