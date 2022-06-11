@@ -37,15 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActionKey.cs" />
+     <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\ActionKeyFirstTalkChief.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\UI_Text_Assistant.cs" />
      <Compile Include="Assets\Scripts\TextWriter.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\FirstAnswerPlayer.cs" />
      <Compile Include="Assets\Scripts\UI_DisplayText.cs" />
      <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\ActionKeyFirstTalk.cs" />
      <Compile Include="Assets\SceneManager_First.cs" />
-     <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\ActionKeyFirstTalkChief.cs" />
-     <Compile Include="Assets\Scripts\Scripts_Text_FirstMeeting\FirstAnswerPlayer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
