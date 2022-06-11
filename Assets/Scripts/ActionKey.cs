@@ -27,7 +27,7 @@ public class ActionKey : MonoBehaviour
     }
     private void TalkUse()
     {
-        if(Input.GetKeyDown(KeyCode.E) && talk.active == true)
+        if(Input.GetKeyDown(KeyCode.E) && talk.activeSelf == true)
         {
             Debug.Log("Talk_usage");
         }

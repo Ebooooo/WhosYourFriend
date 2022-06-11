@@ -8,10 +8,12 @@ public class UI_Text_Assistant: MonoBehaviour
 {
     private Text messageText;
     [SerializeField] GameObject textbcg;
+    [SerializeField] GameObject textanswerplayer;
     private int counter = 0;
     private TextWriter.TextWriterSingle textWriterSingle;
     private void Awake()
     {
+        textanswerplayer.SetActive(false);
         messageText = transform.Find("TextBorder").Find("messageText").GetComponent<Text>();
     }
 
@@ -43,6 +45,7 @@ public class UI_Text_Assistant: MonoBehaviour
                 if(counter == 10)
                 {
                     textbcg.SetActive(false);
+                    textanswerplayer.SetActive(true);
                 }
             };
         }

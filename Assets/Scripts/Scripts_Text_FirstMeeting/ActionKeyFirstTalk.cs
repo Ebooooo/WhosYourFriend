@@ -8,14 +8,15 @@ public class ActionKeyFirstTalk : MonoBehaviour
     public GameObject talk;
     private PlayerController talk_player;
     [SerializeField] GameObject firsttalk;
+    public bool talked;
 
     void Start()
     {
         talk_player = GameObject.Find("Player").GetComponent<PlayerController>();
         talk.SetActive(false);
+        talked = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         TalkUse();
@@ -23,26 +24,40 @@ public class ActionKeyFirstTalk : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col) 
     {
-    if(col.CompareTag("Player"))
+    if(col.CompareTag("Player") && talked == false)
     {
         talk.SetActive(true);
     }
     }
     private void TalkUse()
     {
-        if(Input.GetKeyDown(KeyCode.E) && talk.active == true)
+        if(Input.GetKeyDown(KeyCode.E) && talk.activeSelf == true && talked == false)
         {
+            talked = true;
             firsttalk.SetActive(true);
             talk_player.playerstate = false;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if(col.CompareTag("Player") && talked == false)
+        {
+            talk.SetActive(true);
+        }
+        else
+        {
+            talk.SetActive(false);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other) 
     {
         talk.SetActive(false);
     }
     public void BackToMove()
     {
-        if(firsttalk.active == false)
+        if(firsttalk.activeSelf == false)
         {
             talk_player.playerstate = true;
         }
