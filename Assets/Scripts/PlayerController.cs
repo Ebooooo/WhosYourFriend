@@ -8,14 +8,17 @@ public class PlayerController: MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private Animator walkanimation;
     private Vector2 movement;
+    public bool playerstate;
 
     void Start()
     {
+        playerstate = true;
         walkanimation = GetComponent<Animator>();
     }
 
     void Update()
     {
+        CanMove();
         movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
         walkanimation.SetFloat("Walk", Mathf.Abs(movement.magnitude * moveSpeed));
 
@@ -29,6 +32,18 @@ public class PlayerController: MonoBehaviour
         {
             var xMovement = movement.x * moveSpeed * Time.deltaTime;
             this.transform.Translate(new Vector3(xMovement, 0), Space.World);
+        }
+    }
+
+    public void CanMove()
+    {
+        if(playerstate == false)
+        {
+            moveSpeed = 0f;
+        }
+        if(playerstate == true)
+        {
+            moveSpeed = 5f;
         }
     }
 }

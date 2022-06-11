@@ -373,9 +373,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/SceneManager_First.cs"
 "Assets/Scripts/ActionKey.cs"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/Scripts_Text_FirstMeeting/ActionKeyFirstTalk.cs"
+"Assets/Scripts/Scripts_Text_FirstMeeting/UI_Text_Assistant.cs"
 "Assets/Scripts/TextWriter.cs"
 "Assets/Scripts/UI_DisplayText.cs"
 -langversion:9.0
