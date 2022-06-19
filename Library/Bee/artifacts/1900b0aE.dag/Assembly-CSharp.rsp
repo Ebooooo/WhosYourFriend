@@ -392,6 +392,7 @@
 "Assets/Scripts/Scripts_Text_FirstMeeting/ActionKeyFirstTalkChief.cs"
 "Assets/Scripts/Scripts_Text_FirstMeeting/FirstAnswerPlayer.cs"
 "Assets/Scripts/Scripts_Text_FirstMeeting/UI_Text_Assistant.cs"
+"Assets/Scripts/Scripts_Text_FirstMeeting/WallBlock.cs"
 "Assets/Scripts/TextWriter.cs"
 "Assets/Scripts/UI_DisplayText.cs"
 -langversion:9.0
