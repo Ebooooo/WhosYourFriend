@@ -21,13 +21,20 @@ public class PlayerController: MonoBehaviour
         CanMove();
         movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
         walkanimation.SetFloat("Walk", Mathf.Abs(movement.magnitude * moveSpeed));
+    }
 
+    void CanRotate()
+    {
+        if(moveSpeed > 0f)
+        {
         bool flipped = movement.x < 0;
         this.transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
+        }
     }
 
     private void FixedUpdate() 
     {
+        CanRotate();
         if(movement != Vector2.zero)
         {
             var xMovement = movement.x * moveSpeed * Time.deltaTime;
