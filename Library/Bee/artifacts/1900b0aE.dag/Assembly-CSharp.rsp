@@ -387,6 +387,7 @@
 "Assets/SceneManager_First.cs"
 "Assets/Scripts/ActionKey.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/NotesScript.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Scripts_Text_FirstMeeting/ActionKeyFirstTalk.cs"
 "Assets/Scripts/Scripts_Text_FirstMeeting/ActionKeyFirstTalkChief.cs"
